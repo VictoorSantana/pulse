@@ -1,0 +1,4 @@
+<small class="hint text-danger position-absolute scale-in-center"
+*ngIf="(control?.errors && control?.hasError(error)) && control?.touched">
+    <ng-content></ng-content>
+</small>

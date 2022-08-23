@@ -1,0 +1,15 @@
+
+
+.painel {
+    &-bar {
+        width: 350px;
+        display: inline-block;
+        min-height: calc(100vh - 55px);
+    }
+    &-content {
+        width: calc(100vw - 350px);
+        display: inline-block;
+        height: calc(100vh - 55px);
+        overflow-y: auto;
+    }
+}
