@@ -11,9 +11,9 @@ import { AuthComponent } from './auth.component';
 @NgModule({
   imports: [
     CommonModule,
-    AuthRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    AuthRoutingModule,
   ],
   declarations: [
     AuthComponent

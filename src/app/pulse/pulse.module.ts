@@ -11,12 +11,14 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { MaskReaisDirective } from '../modules/directives/mask-reais/mask-reais.directive';
 import { OnlyNumbersDirective } from '../modules/directives/only-numbers/only-numbers.directive';
 import { RealPipe } from '../shared/pipes/pipes';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    PulsesRoutingModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
+    PulsesRoutingModule,
   ],
   declarations: [  
     HintComponent,  
@@ -28,6 +30,9 @@ import { RealPipe } from '../shared/pipes/pipes';
     MaskReaisDirective,
     OnlyNumbersDirective,
     RealPipe
+  ],
+  exports: [
+    HintComponent,
   ],
   providers: []
 })

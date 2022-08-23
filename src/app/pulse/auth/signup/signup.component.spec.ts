@@ -1,4 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ToastrModule } from 'ngx-toastr';
+import { HintComponent } from 'src/app/components/hint/hint.component';
 
 import { SignupComponent } from './signup.component';
 
@@ -8,7 +13,8 @@ describe('SignupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignupComponent ]
+      imports: [ReactiveFormsModule, RouterTestingModule, HttpClientModule, ToastrModule.forRoot()],
+      declarations: [ SignupComponent , HintComponent]
     })
     .compileComponents();
   });

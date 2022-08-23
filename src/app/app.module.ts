@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpAsyncModule } from './modules/http-async/http-async.module';
 import { InterceptorModule } from './modules/http-async/interceptors/interceptor.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
