@@ -1,0 +1,29 @@
+FROM node:14.16.1-alpine as build
+
+WORKDIR /usr/app
+
+COPY package.json package.json
+RUN apk --no-cache add --virtual .deps \
+  g++ gcc libgcc libstdc++ linux-headers make python && \
+  yarn install && \
+  apk del .deps
+
+#COPY src/ src/
+#COPY angular.json package.json tsconfig.json ngsw-config.json ./
+
+#EXPOSE 4202
+
+RUN npm i -g @angular/cli
+
+RUN npm i -g pm2
+
+#RUN npm run build
+
+#RUN pm2 start "ng serve"
+
+#FROM nginx
+#COPY --from=build /usr/app/public /usr/share/nginx/html
+#COPY default.conf /etc/nginx/conf.d/
+##CMD ["pm2 start", "ng serve --port 4202"]
+#CMD ["ng serve --port 4202"]
+CMD npm run start
